@@ -12,7 +12,7 @@ function PaymentForm() {
   const [isCustomAccount, setIsCustomAccount] = useState(false);
 
   const handleAmountNext = (account) => {
-    if (account.target.value === "custom") {
+    if (account === "custom") {
       setIsCustomAccount(true);
       setCurrentStep(0);
     } else {

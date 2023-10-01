@@ -11,11 +11,6 @@ function EnterAmount() {
     setInputValue(newValue);
   };
 
-  const handleInputClick = () => {
-    setInputValue('0');
-  };
-
-  console.log("input Value outside", inputValue);
   const formatInput = () => {
     const length = inputValue.length;
     if (length === 0) {
