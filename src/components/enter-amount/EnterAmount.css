@@ -1,0 +1,12 @@
+.enter-amount{
+    border: none;
+    border-bottom: 1px solid #797979;
+    border-radius: 0;
+    padding-left: 20px;
+  }
+  
+  .enter-amount:focus-within, .enter-amount:focus {
+    box-shadow: none;
+    border-bottom: 1px solid #4096ff !important;
+  }
+  

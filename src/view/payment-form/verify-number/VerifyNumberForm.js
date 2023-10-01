@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/*import React, { useState } from "react";
 
 function VerifyNumberForm({ onNext }) {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -29,4 +29,4 @@ function VerifyNumberForm({ onNext }) {
   );
 }
 
-export default VerifyNumberForm;
+export default VerifyNumberForm; */

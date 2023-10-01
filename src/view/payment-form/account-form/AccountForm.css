@@ -1,0 +1,7 @@
+.debit-account-group {
+  display: flex;
+  align-items: flex-start;
+
+}  .debit-account-radio {
+  display: flex;
+}
