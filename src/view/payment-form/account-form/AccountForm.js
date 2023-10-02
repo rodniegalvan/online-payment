@@ -31,12 +31,12 @@ function AccountForm({ onNext }) {
     <div>
       <img src={bpi} alt="BPI Logo" width="100" />
       <Form form={form} layout="horizontal" style={{ maxWidth: 600 }}>
-        <h2>Enter Amount</h2>
+        <p>Please Enter Amount</p>
         <Form.Item name="amount">
           <EnterAmount />
         </Form.Item>
+        <p className="choose-debit">Choose what BPI account to debit from:</p>
         <Form.Item name="account">
-          <p className="choose-debit">Choose what BPI account to debit from:</p>
           {/* Use the CardAccountGroup component */}
           <CardAccountGroup
             users={users}

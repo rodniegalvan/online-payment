@@ -3,18 +3,29 @@ import { Input } from "antd";
 import "./EnterAmount.css";
 
 function EnterAmount() {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
+  const [inputWidth, setInputWidth] = useState(85);
 
   const handleInputChange = (e) => {
-    let newValue = e.target.value.replace(/\D/g, ''); // Remove non-digit characters
-    newValue = newValue.replace(/^0+(?=\d)/, ''); // Remove leading zeros before the decimal point
+    let newValue = e.target.value.replace(/\D/g, ""); // Remove non-digit characters
+    newValue = newValue.replace(/^0+(?=\d)/, ""); // Remove leading zeros before the decimal point
+
     setInputValue(newValue);
+
+    let length = newValue.length;
+    if (length === 0 || length === 1 || length === 2 || length === 3) {
+      setInputWidth(85);
+    } else {
+      if (inputWidth <= 1500) {
+        setInputWidth(85 + newValue.length * 13);
+      }
+    }
   };
 
   const formatInput = () => {
     const length = inputValue.length;
     if (length === 0) {
-      return '';
+      return "";
     }
 
     if (length === 1) {
@@ -26,8 +37,10 @@ function EnterAmount() {
     }
 
     // Shift the digits from right to left
-    const integerPart = inputValue.substring(0, length - 2);
+    let integerPart = inputValue.substring(0, length - 2);
     const decimalPart = inputValue.substring(length - 2, length);
+    // Add commas for every thousand
+    integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return `${integerPart}.${decimalPart}`;
   };
 
@@ -38,7 +51,8 @@ function EnterAmount() {
       value={formatInput()}
       onChange={handleInputChange}
       placeholder="0.00"
-      prefix="PHP"
+      prefix="₱"
+      style={{ width: inputWidth }}
     />
   );
 }

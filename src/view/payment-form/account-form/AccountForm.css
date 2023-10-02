@@ -8,3 +8,7 @@
 .ant-form-item{
   font-family: Poppins, sans-serif !important;
 }
+.choose-debit{
+  text-align: start;
+  margin-top: 5em;
+}

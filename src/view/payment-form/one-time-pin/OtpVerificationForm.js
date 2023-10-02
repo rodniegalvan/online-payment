@@ -22,7 +22,8 @@ function OtpVerificationForm({ onConfirm }) {
 
   return (
     <div>
-      <h2>Step 3: Enter OTP</h2>
+        <h2>Verification</h2>
+        <p>To proceed, a 6-digit code will be sent via SMS</p>
       <input
         type="text"
         placeholder="Enter OTP"
@@ -30,7 +31,7 @@ function OtpVerificationForm({ onConfirm }) {
         onChange={handleOtpChange}
       />
       <p className="error">{error}</p>
-      <button onClick={handleConfirmPayment}>Confirm Payment</button>
+      <button onClick={handleConfirmPayment}>VERIFY</button>
     </div>
   );
 }
