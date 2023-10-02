@@ -35,9 +35,8 @@ function AccountForm({ onNext }) {
         <Form.Item name="amount">
           <EnterAmount />
         </Form.Item>
-        <Form.Item
-          name="account"
-        >
+        <Form.Item name="account">
+          <p className="choose-debit">Choose what BPI account to debit from:</p>
           {/* Use the CardAccountGroup component */}
           <CardAccountGroup
             users={users}

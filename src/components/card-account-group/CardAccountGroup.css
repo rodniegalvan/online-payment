@@ -1,26 +1,86 @@
 .card-info{
     display: flex;
     flex-direction: column;
+    padding-left: 1em;
+    white-space: nowrap;
+    align-items: flex-start;  
+}
+.radio-label{
+    font-size: 1em;
+    font-weight: 500;
+}
+.expiration-date{
+    font-size: 0.6em;
+    font-weight: 300;
+    color: rgb(97, 97, 97);
 }
 .card-image{
-    width: 100%;
     height: auto;
     object-fit: contain;
-    max-width: 2.5em;
+    width: 2.5em;
+    display: flex;
 }
-span .card-account-radio{
+.credit-card-icon{
+    color: blue;
+    font-size: 1.5em;
+}
+.card-account-details{
     display: flex;
     align-items: center;
-    height: 100%;
-    border: 1px solid black;
+}
+.card-account-label{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.card-account-item{
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 3.5em;
+    max-width: 20em;
+    box-sizing: border-box;
+    padding: 0 1em;
+    border: 2px solid transparent;
+    transition: border 0.3s;
 }
 .card-account-group{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 1em;
 }
-.ant-radio-wrapper{
-    min-height: 3em;
+/* CardAccountGroup.css */
+
+/* Default radio button styles */
+.card-account-label input[type="radio"]{
+    display: none; /* Hide the default radio button */
+  }  
+
+  
+  /* Custom radio button styles for checked state */
+/* Custom radio button styles for checked state */
+/* Custom radio button styles for checked state */
+/* Custom radio button styles for checked state */
+.card-account-label input[type="radio"]:checked + .card-account-item::after {
+    background-color: #007bff;
+    border-radius: 50%;
+    content: "\2713";
+    color: #fff;
+    position: absolute;
+    line-height: 14px;
+    font-size: 1em;
+    top: 50%; /* Align it vertically in the middle of the card-account-item */
+    right: 1em; /* Adjust the right spacing as needed */
+    transform: translateY(-50%); /* Center it vertically */
+    width: 1em;
+    height: 1em;
 }
-.ant-wave-target{
-    display: none;
+
+/* Apply border to card-account-item when checked */
+.card-account-label input[type="radio"]:checked + .card-account-item{
+    border: 2px solid #007bff;
+    position: relative; /* Make sure the parent has relative positioning */
 }

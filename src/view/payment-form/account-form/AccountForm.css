@@ -5,3 +5,6 @@
 }  .debit-account-radio {
   display: flex;
 }
+.ant-form-item{
+  font-family: Poppins, sans-serif !important;
+}
