@@ -17,7 +17,7 @@ function EnterAmount() {
       setInputWidth(85);
     } else {
       if (inputWidth <= 1500) {
-        setInputWidth(85 + newValue.length * 13);
+        setInputWidth(40 + newValue.length * 20);
       }
     }
   };

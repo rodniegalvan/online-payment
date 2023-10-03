@@ -4,7 +4,7 @@ import OtpVerificationForm from "./one-time-pin/OtpVerificationForm";
 import ConfirmationMessage from "./confirmation/ConfirmationMessage";
 import AddBank from "./add-bank/AddBank";
 
-import "./PaymentForm.scss";
+import "./PaymentForm.css";
 
 function PaymentForm() {
   const [currentStep, setCurrentStep] = useState(0);
